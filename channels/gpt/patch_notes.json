@@ -3,6 +3,21 @@
 	"channel": "gpt",
 	"entries": [
 		{
+			"version": "0.13.0-alpha",
+			"date": "2026-07-15",
+			"title": "Nouveaux ennemis, progression et interface complète",
+			"notes": [
+				"Astral Crest accompagne désormais le menu, tandis que Fracture Swarm se déclenche à chaque apparition du boss.",
+				"Les boss récurrents doublent de vie, gagnent une armure lisible et les ennemis peuvent lâcher des orbes rendant 5 à 10 PV.",
+				"Deux menaces rejoignent les vagues : le mage Artilleriste du Voile et le sniper Guetteur arcanique, avec attaques clairement télégraphiées.",
+				"Les parties standard durent maintenant 20 minutes et les paliers de niveau offrent des tirages de rareté améliorés jusqu'au Légendaire.",
+				"Les Paramètres ont été reconstruits avec commandes clavier et manette indépendantes, glyphes dynamiques, accessibilité, compteur FPS et réglages complets.",
+				"Le nouvel écran Statistiques conserve jusqu'à 200 parties et permet de filtrer, trier et consulter chaque résultat en détail.",
+				"La stabilité a été renforcée pour les vagues très chargées, avec une cible validée de 220 ennemis simultanés.",
+				"Launcher 2.1.0 adapte sa mise en page, garde l'historique des notes hors ligne et présente des états de mise à jour plus clairs."
+			]
+		},
+		{
 			"version": "0.12.3-alpha",
 			"date": "2026-07-15",
 			"title": "Package Windows multijoueur finalisé",
