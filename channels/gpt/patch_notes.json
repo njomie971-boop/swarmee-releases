@@ -3,6 +3,16 @@
 	"channel": "gpt",
 	"entries": [
 		{
+			"version": "0.12.3-alpha",
+			"date": "2026-07-15",
+			"title": "Package Windows multijoueur finalisé",
+			"notes": [
+				"Le numéro de version Windows est maintenant aligné avec la version affichée dans le jeu et le launcher.",
+				"Cette build conserve le serveur dédié, les salons par code, le lobby hôte corrigé, le relais automatique et les contrôles de compatibilité de la 0.12.2.",
+				"Cette alpha sera validée en conditions réelles avec les premiers joueurs après publication."
+			]
+		},
+		{
 			"version": "0.12.2-alpha",
 			"date": "2026-07-14",
 			"title": "Multijoueur en ligne rétabli",
