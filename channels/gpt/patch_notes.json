@@ -3,6 +3,20 @@
 	"channel": "gpt",
 	"entries": [
 		{
+			"version": "0.15.0-alpha",
+			"date": "2026-07-16",
+			"title": "Menaces, rencontres tactiques et reprise de partie",
+			"notes": [
+				"Quatre niveaux de Menace transforment la difficulté : Initiation et Standard sont disponibles immédiatement, puis Éclipse et Cataclysme se déverrouillent par les victoires.",
+				"La progression a été rééquilibrée : ennemis plus résistants et réactifs, XP plus maîtrisée, armure cohérente, projectiles supplémentaires bornés et réduction des cooldowns réellement limitée à 80 %.",
+				"Le Traqueur de Faille charge les joueurs qui kitent, le Porte-Égide protège ses alliés et le Shadow Bearer utilise désormais un slam lourd, lisible et punissable.",
+				"Le Cœur de l’Éclipse devient un vrai combat en trois phases, avec fenêtres de vulnérabilité, salves, ruptures, portails et pluie de zones dangereuses.",
+				"Deux points d’intérêt tactiques parmi quatre apparaissent à chaque partie et proposent défense, risque, mobilité ou récompense d’augment.",
+				"En solo, la pause arrête réellement l’action. La partie peut être sauvegardée, fermée puis reprise avec héros, ennemis, boss, POI, XP, cooldowns et effets temporaires restaurés.",
+				"La stabilité longue durée a été renforcée avec pools bornés, fermeture 3D propre, logs rotatifs et récupération proposée après un arrêt anormal."
+			]
+		},
+		{
 			"version": "0.14.0-alpha",
 			"date": "2026-07-15",
 			"title": "Le Bastion d’obsidienne — refonte visuelle complète",
