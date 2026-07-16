@@ -1,13 +1,13 @@
 {
     "manifest_version":  1,
     "channel":  "gpt",
-    "version":  "0.13.0-alpha",
-    "file":  "SWARMEE-gpt-v0.13.0-alpha-win64.zip",
-    "url":  "https://github.com/njomie971-boop/swarmee-releases/releases/download/gpt-v0.13.0-alpha/SWARMEE-gpt-v0.13.0-alpha-win64.zip",
-    "sha256":  "391f63d69f7f6aae00a87fd0b36a7e1539b6817445e5e557f06b0050a7cef116",
-    "size":  470500530,
+    "version":  "0.14.0-alpha",
+    "file":  "SWARMEE-gpt-v0.14.0-alpha-win64.zip",
+    "url":  "https://github.com/njomie971-boop/swarmee-releases/releases/download/gpt-v0.14.0-alpha/SWARMEE-gpt-v0.14.0-alpha-win64.zip",
+    "sha256":  "65e1210b6932290cf1f4aa6300104e562288a94fe48efa9a8cfbb61d878468b6",
+    "size":  470541451,
     "executable":  "SWARMEE.exe",
-    "published_at":  "2026-07-15T12:07:01Z",
+    "published_at":  "2026-07-16T00:59:44Z",
     "patch_notes_url":  "https://raw.githubusercontent.com/njomie971-boop/swarmee-releases/main/channels/gpt/patch_notes.json",
-    "patch_notes_sha256":  "9010b97feb9ed76f7a3511be718db6f45d9ef4677b81204bbdf6576b4f62d286"
+    "patch_notes_sha256":  "142695f174d40ffc5c98cf20ecbf0f3f290c0bec2aaad2a231a043ea3ea2c39e"
 }
