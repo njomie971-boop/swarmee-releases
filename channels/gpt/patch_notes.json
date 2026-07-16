@@ -3,6 +3,19 @@
 	"channel": "gpt",
 	"entries": [
 		{
+			"version": "0.14.0-alpha",
+			"date": "2026-07-15",
+			"title": "Le Bastion d’obsidienne — refonte visuelle complète",
+			"notes": [
+				"L’ensemble du jeu adopte une direction dark fantasy SWARMEE cohérente, fondée sur l’obsidienne, l’or vieilli, l’ivoire et l’énergie astrale cyan.",
+				"Le menu, les sélections, le multijoueur, les paramètres, les statistiques, le codex, la pause, le HUD, les augments et les écrans de fin ont été reconstruits avec une hiérarchie et des composants communs.",
+				"Les transitions, focus, choix de héros, cartes, augments, niveaux, victoires et défaites utilisent désormais des animations courtes, interruptibles et sans déplacement de mise en page.",
+				"L’option Réduire les animations remplace les déplacements par de courts fondus tout en conservant les retours indispensables.",
+				"La navigation clavier et manette, les états vides et d’erreur ainsi que les textes français et anglais ont reçu une passe d’accessibilité et de lisibilité.",
+				"Launcher 2.2.0 adopte le même langage visuel, un vrai sélecteur GPT/Claude, une action JOUER prioritaire et un historique repliable sans compromettre le mode hors ligne ni l’isolation des canaux."
+			]
+		},
+		{
 			"version": "0.13.0-alpha",
 			"date": "2026-07-15",
 			"title": "Nouveaux ennemis, progression et interface complète",
