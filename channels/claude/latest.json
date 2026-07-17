@@ -1,0 +1,13 @@
+{
+    "manifest_version":  1,
+    "channel":  "claude",
+    "version":  "0.15.0-alpha",
+    "file":  "SWARMEE-claude-v0.15.0-alpha-win64.zip",
+    "url":  "https://github.com/njomie971-boop/swarmee-releases/releases/download/claude-v0.15.0-alpha/SWARMEE-claude-v0.15.0-alpha-win64.zip",
+    "sha256":  "d34ee873f77cf5af182d05fcf81162385feecfdd3602b1bcc5a46dd002ce95ae",
+    "size":  471805476,
+    "executable":  "SWARMEE.exe",
+    "published_at":  "2026-07-17T17:51:36Z",
+    "patch_notes_url":  "https://raw.githubusercontent.com/njomie971-boop/swarmee-releases/main/channels/claude/patch_notes.json",
+    "patch_notes_sha256":  "4aaf57a760e105afcec143f41c34ed090c68b2b9c80388a7ad9054769dec2a21"
+}
