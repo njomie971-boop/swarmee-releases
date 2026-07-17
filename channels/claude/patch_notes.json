@@ -1,0 +1,155 @@
+{
+	"schema_version": 2,
+	"channel": "claude",
+	"archive_verified_at": "2026-07-15",
+	"entries": [
+		{
+			"version": "0.15.0-alpha",
+			"date": "2026-07-17",
+			"title": "Parité avec le socle stable GPT 0.15.0 — Menaces, reprise de partie, refonte UI",
+			"status": "released",
+			"new_features": [
+				"Le canal Claude rattrape tout le socle stable de la version GPT 0.15.0 : gameplay, interface, stabilité et réseau, tout en restant un canal indépendant avec ses propres sauvegardes et installations.",
+				"Quatre niveaux de Menace (0 à 3) structurent la difficulté : Initiation et Standard immédiatement, Éclipse et Cataclysme déverrouillés par les victoires.",
+				"Nouvelles courbes d'équilibrage : ennemis plus résistants, armure ennemie, XP maîtrisée, réduction de cooldown réellement limitée à 80 %, orbes de soin à 0,5 %.",
+				"Nouveaux ennemis tactiques : le Traqueur de Faille charge les fuyards, le Porte-Égide protège ses alliés, le Shadow Bearer frappe d'un slam lourd et lisible.",
+				"Le Cœur de l'Éclipse est un vrai combat en trois phases avec fenêtres de vulnérabilité, salves, portails et pluies de zones dangereuses.",
+				"Quatre points d'intérêt tactiques (deux tirés par partie) offrent défense, risque, mobilité ou récompense d'augment.",
+				"En solo, la pause arrête réellement l'action ; la partie se sauvegarde, se ferme et se reprend avec héros, ennemis, boss, POI, XP, cooldowns et effets restaurés — récupération proposée après un arrêt anormal.",
+				"Refonte visuelle « Bastion d'obsidienne » : thème unifié, animations d'interface, responsive et accessibilité clavier/manette.",
+				"Le ping s'affiche en multijoueur et le réseau utilise le serveur SWARMEE dédié avec connexion directe puis relais automatique."
+			],
+			"fixes": [
+				"L'ancien profil Claude (versions 0.12 et antérieures) est adopté automatiquement par copie — l'original n'est jamais supprimé.",
+				"Les sauvegardes Claude utilisent des fichiers dédiés au canal ; aucune collision possible avec une installation GPT sur la même machine.",
+				"Une version Claude ne peut pas rejoindre une version GPT : le handshake refuse les canaux différents avec un message clair.",
+				"Corrections de pools, fermeture 3D propre, logs rotatifs et optimisations longue durée importées du socle GPT 0.15.0."
+			],
+			"known_limitations": [
+				"Cette version établit la parité technique avec GPT 0.15.0 ; le développement Claude reprend ensuite son cours indépendant.",
+				"La validation complète (tests, QA visuelle, réseau, longue durée) a été exécutée spécifiquement sur le canal Claude avant publication."
+			],
+			"sources": [
+				"tag:claude-v0.15.0-alpha",
+				"git:gpt-v0.15.0-alpha (socle importé)",
+				"docs/CLAUDE/GPT_015_PARITY_MAP.md"
+			]
+		},
+		{
+			"version": "0.12.1-alpha",
+			"date": "2026-07-13",
+			"title": "Lobby multijoueur nouvelle génération et launcher 1.1.0",
+			"status": "archive_only",
+			"new_features": [
+				"Chaque joueur du lobby ouvre le même écran complet de sélection du héros que dans le mode solo.",
+				"L’hôte choisit le champ de bataille sur l’écran des quatre arènes et cette sélection est synchronisée avec tous les joueurs.",
+				"Le launcher 1.1.0 ajoute l’icône officielle, le fond illustré et les notes de version riches avec cache local."
+			],
+			"fixes": [
+				"Le mode de sélection multijoueur réutilise les écrans solo sans modifier leur parcours normal.",
+				"La sélection de carte est transmise aux joueurs présents, aux arrivants tardifs et au lancement de la partie."
+			],
+			"known_limitations": [
+				"Cette version est documentée dans le projet et les PR Claude fusionnées, mais aucun tag ni aucune release publique 0.12.1-alpha n’a été retrouvé."
+			],
+			"sources": [
+				"git:origin/track/claude@3a0cfc4:CHANGELOG.md",
+				"https://github.com/njomie971-boop/swarmee-game/pull/2",
+				"https://github.com/njomie971-boop/swarmee-game/pull/3"
+			]
+		},
+		{
+			"version": "0.12.0-alpha",
+			"date": "2026-07-13",
+			"title": "Équilibrage, Cercle d’Épreuve, jeu en ligne et musique originale",
+			"status": "released",
+			"new_features": [
+				"« Prominence » de Pipo XLF accompagne les parties et porte le total audio à 18 flux.",
+				"Le jeu en ligne par code tente une connexion directe puis un relais automatique.",
+				"Le Cercle d’Épreuve récompense le maintien dans une zone pendant 20 secondes.",
+				"Le directeur de difficulté, les héros, les ennemis et le boss ont reçu une passe d’équilibrage complète.",
+				"Le jeu comporte 114 augments et une minimap enrichie de marqueurs d’événements."
+			],
+			"fixes": [
+				"L’adresse Noray obsolète, le handshake UDP, les codes de salon, le réhébergement et la fermeture des sessions ont été corrigés.",
+				"Les versions incompatibles sont refusées avec un message lisible au lieu d’une désynchronisation silencieuse."
+			],
+			"known_limitations": [
+				"Le serveur communautaire Noray pouvait être indisponible ; le mode Avancé LAN/UPnP était le repli documenté."
+			],
+			"sources": [
+				"tag:v0.12.0-alpha",
+				"https://github.com/njomie971-boop/swarmee-releases/releases/tag/v0.12.0-alpha",
+				"https://github.com/njomie971-boop/swarmee-game/pull/1",
+				"git:origin/track/claude@3a0cfc4:CHANGELOG.md",
+				"asset:v0.12.0-alpha/patch_notes.json"
+			]
+		},
+		{
+			"version": "0.11.0-alpha",
+			"date": "2026-07-12",
+			"title": "Écrans de sélection, failles du Voile et multijoueur auto-hébergé",
+			"status": "released",
+			"new_features": [
+				"Le nouvel écran de héros présente la fiche complète, le kit, le passif et les statistiques.",
+				"Un écran séparé permet de choisir parmi quatre champs de bataille avec aperçu et histoire.",
+				"Les failles du Voile ouvrent des drafts d’augments spéciaux en cours de partie.",
+				"Le multijoueur par Internet auto-hébergé via UPnP complète le mode LAN."
+			],
+			"fixes": [
+				"Les télégraphes DangerZone sont désormais poolés pour réduire le coût des phases chargées du boss."
+			],
+			"known_limitations": [
+				"L’hébergement Internet dépend de l’UPnP du routeur ou d’une redirection manuelle du port UDP 42424."
+			],
+			"sources": [
+				"tag:v0.11.0-alpha",
+				"https://github.com/njomie971-boop/swarmee-releases/releases/tag/v0.11.0-alpha",
+				"git:origin/track/claude@2aade76:CHANGELOG.md",
+				"asset:v0.12.0-alpha/patch_notes.json"
+			]
+		},
+		{
+			"version": "0.10.2-alpha",
+			"date": "2026-07-12",
+			"title": "Correctif critique de l’exécutable Windows",
+			"status": "released",
+			"new_features": [],
+			"fixes": [
+				"L’exécutable exporté charge à nouveau les héros, les augments, les cartes et l’audio depuis les ressources remappées.",
+				"Le boot exporté vérifie désormais explicitement les comptes de données et de flux audio."
+			],
+			"known_limitations": [],
+			"sources": [
+				"tag:v0.10.2-alpha",
+				"https://github.com/njomie971-boop/swarmee-releases/releases/tag/v0.10.2-alpha",
+				"git:origin/track/claude@cbb2bd3:CHANGELOG.md",
+				"asset:v0.12.0-alpha/patch_notes.json"
+			]
+		},
+		{
+			"version": "0.10.1-alpha",
+			"date": "2026-07-11",
+			"title": "Première alpha distribuée",
+			"status": "released",
+			"new_features": [
+				"Le mode Infini prolonge la partie après la victoire avec des boss récurrents.",
+				"Les trois héros disposent de passifs et d’indicateurs de compétence runiques.",
+				"Le lancement rapide ou normal des compétences, l’aperçu TAB, quatre cartes et les cinématiques de mort et de boss sont disponibles.",
+				"Le premier launcher public installe, met à jour et conserve une version précédente."
+			],
+			"fixes": [
+				"L’écran noir après la mort, l’aperçu TAB, la perte d’orbes d’expérience, la portée des attaques et plusieurs freezes ont été corrigés."
+			],
+			"known_limitations": [
+				"Cette archive a ensuite été remplacée par 0.10.2-alpha : l’exécutable 0.10.1-alpha publié ne chargeait pas correctement ses données et son audio."
+			],
+			"sources": [
+				"tag:v0.10.1-alpha",
+				"https://github.com/njomie971-boop/swarmee-releases/releases/tag/v0.10.1-alpha",
+				"git:origin/track/claude@0684ff3:CHANGELOG.md",
+				"git:origin/track/claude@cbb2bd3:CHANGELOG.md"
+			]
+		}
+	]
+}
