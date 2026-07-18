@@ -1,8 +1,37 @@
 {
 	"schema_version": 2,
 	"channel": "claude",
-	"archive_verified_at": "2026-07-15",
+	"archive_verified_at": "2026-07-17",
 	"entries": [
+		{
+			"version": "0.16.0-alpha",
+			"date": "2026-07-17",
+			"title": "Multijoueur social — équipe, réanimation, XP commune, lobby persistant, audio",
+			"status": "released",
+			"new_features": [
+				"Coopération repensée : votre équipe partage une seule barre d'XP et un niveau commun, chacun garde ses propres augments.",
+				"Joueurs à terre et réanimation : un héros tombé n'est plus ciblé par les ennemis ; un allié maintient Interagir (~5 s) pour le relever à 35 % de vie avec une brève invulnérabilité. L'équipe n'est vaincue que lorsque tout le monde est à terre.",
+				"Montées de niveau synchronisées : le monde se met en pause, chacun reçoit son propre choix d'augment avec un minuteur commun de 15 secondes ; choix automatique à l'expiration.",
+				"Lobby persistant : après une partie, toute l'équipe revient au même salon (même code, mêmes profils, mêmes couleurs) — rejouer, retourner au lobby, abandonner ou quitter se décident par vote à la majorité.",
+				"Profils sociaux : pseudonyme, dix couleurs uniques, symbole d'accessibilité et avatar ; cartes de joueurs complètes dans un nouveau salon, jusqu'à dix joueurs (expérimental).",
+				"Barre d'équipe, alliés colorés sur la minimap, rubans et notifications (boss, allié à terre, niveau, vote) et conseils coopératifs.",
+				"Bande-son étendue : musiques de menu, de partie et de boss avec transitions en fondu enchaîné et sons pour les événements du salon.",
+				"Les ennemis se répartissent naturellement au lieu de s'empiler sur un seul point ; le contraste des zones de capture est nettement amélioré."
+			],
+			"fixes": [
+				"La mort d'un joueur est désormais répliquée immédiatement : les ennemis n'assiègent plus un héros à terre.",
+				"Les cristaux d'XP profitent à toute l'équipe une seule fois, côté hôte autoritaire — l'hôte comme les clients voient le même niveau.",
+				"« Recommencer » ne recharge plus la scène d'un seul joueur : la décision est partagée et resynchronise tout le monde.",
+				"Les paquets d'une partie précédente sont rejetés (match_epoch autoritaire) après un retour au lobby ou un replay."
+			],
+			"known_limitations": [
+				"Limite de dix joueurs expérimentale ; validée en tests locaux à deux instances (LAN, Internet direct, relais).",
+				"Réservé à une prochaine mise à jour (0.16.1) : indicateurs tactiques sous le héros, flèches d'alliés hors écran, réplication complète des événements en multijoueur, tooltips enrichis, bibliothèque des héros, options du launcher.",
+				"Validation exécutée spécifiquement sur le canal Claude (batterie de tests complète, scénarios multijoueur dédiés, soaks, QA visuelle, export Windows)."
+			],
+			"credits": "Musiques originales fournies par SuperBokit. OST « Prominence » par Pipo XLF.",
+			"channel": "claude"
+		},
 		{
 			"version": "0.15.0-alpha",
 			"date": "2026-07-17",
