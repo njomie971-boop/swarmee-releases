@@ -3,6 +3,21 @@
 	"channel": "gpt",
 	"entries": [
 		{
+			"version": "0.16.0-alpha",
+			"date": "2026-07-18",
+			"title": "Escouades persistantes, entraide et identité multijoueur",
+			"notes": [
+				"Les salons accueillent désormais jusqu’à dix joueurs et restent ouverts entre les parties : retournez au lobby puis relancez sans recréer la salle.",
+				"La progression devient collective avec XP et niveau d’équipe, tandis que chaque joueur choisit son augment personnel dans un tirage synchronisé et limité dans le temps.",
+				"Les alliés peuvent être mis à terre puis réanimés ; la partie ne se termine en défaite que lorsque toute l’escouade est neutralisée.",
+				"Profils, pseudonymes, avatars, couleurs accessibles, cartes de lobby, barre d’équipe, minimap, flèches hors écran et compas tactique rendent les groupes nombreux lisibles.",
+				"Le ping réel de la partie apparaît dans le HUD et le lobby, y compris lorsque le trajet passe par le relais Noray, avec lissage, timeouts et option persistante.",
+				"La Bibliothèque des héros, les objectifs, événements, points d’intérêt et conseils contextuels sont disponibles en français et en anglais sur toutes les résolutions prises en charge.",
+				"Les nouvelles playlists utilisent les musiques fournies pour l’écran-titre, le début et le milieu des runs, les failles et les boss, avec transitions propres entre les contextes.",
+				"Le launcher 2.3.0 ajoute des réglages persistants de langue, de dossier de téléchargement et de bande passante sans compromettre le mode hors ligne, le rollback ni l’isolation GPT/Claude."
+			]
+		},
+		{
 			"version": "0.15.0-alpha",
 			"date": "2026-07-16",
 			"title": "Menaces, rencontres tactiques et reprise de partie",
