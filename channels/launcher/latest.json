@@ -1,0 +1,20 @@
+{
+    "schema_version":  1,
+    "version":  "2.4.0",
+    "windows_version":  "2.4.0.0",
+    "file":  "SwarmeeLauncher-v2.4.0-win64.exe",
+    "url":  "https://github.com/njomie971-boop/swarmee-releases/releases/download/launcher-v2.4.0/SwarmeeLauncher-v2.4.0-win64.exe",
+    "sha256":  "a5718df86e7f3a978d94d4fb06c2ac52e052d9bc47518df360850f31a0604f12",
+    "size":  106895584,
+    "built_at":  "2026-07-20T19:50:13Z",
+    "published_at":  "2026-07-20T19:50:13Z",
+    "timezone":  "America/Guadeloupe (UTC-04:00)",
+    "minimum_compatible_version":  "2.4.0",
+    "bootstrap_version":  1,
+    "restart_arguments":  [
+
+                          ],
+    "mandatory":  false,
+    "summary_fr":  "SWARMEE Launcher 2.4.0 : launcher canonique unique, auto-mise a jour signee, chemin stable, nettoyage automatique, desinstallation, progression transparente.",
+    "summary_en":  "SWARMEE Launcher 2.4.0 : launcher canonique unique, auto-mise a jour signee, chemin stable, nettoyage automatique, desinstallation, progression transparente."
+}
