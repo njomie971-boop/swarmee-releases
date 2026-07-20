@@ -1,0 +1,65 @@
+{
+  "channel": "launcher",
+  "entries": [
+    {
+      "version": "2.4.0",
+      "date": "2026-07-20",
+      "title": "Launcher canonique : auto-mise à jour, chemin stable, nettoyage et désinstallation",
+      "title_en": "Canonical launcher: self-update, stable path, cleanup and uninstall",
+      "status": "released",
+      "new_features": [
+        "Un seul SWARMEE Launcher pour les deux jeux : le launcher se met désormais à jour tout seul via un manifeste global signé (channels/launcher), AVANT de vérifier les jeux Claude et GPT.",
+        "Mise à jour annoncée dans une vraie fenêtre : versions, taille, résumé, caractère obligatoire ou facultatif, étapes réelles (téléchargement en octets, signature, taille, SHA-256, installation, redémarrage, contrôle de santé) — jamais silencieuse, jamais de faux pourcentage.",
+        "Remplacement atomique par un updater externe : sauvegarde de l'ancienne version, restauration automatique et redémarrage de la version précédente si le contrôle de santé échoue.",
+        "Installation dans un chemin stable (%LOCALAPPDATA%\\SWARMEE\\Launcher) : les raccourcis Bureau et Menu Démarrer pointent toujours vers ce chemin, plus jamais vers un fichier versionné dans Téléchargements ; paramètres (langue, volume, sons, dossier, comportements, canal sélectionné) préservés à chaque mise à jour.",
+        "Le launcher apparaît dans Paramètres Windows > Applications installées, avec une commande de désinstallation sécurisée.",
+        "Nettoyage automatique après une mise à jour validée (ancienne version, rollback, ZIP, staging, fichiers partiels) et action « Nettoyer les fichiers obsolètes » avec espace récupérable affiché avant suppression.",
+        "Section « Maintenance et désinstallation » : désinstaller un canal, tous les jeux, ou tout SWARMEE (uninstaller externe, confirmation renforcée, les sauvegardes ne sont jamais supprimées sans confirmation explicite).",
+        "Les manifestes de jeu peuvent exiger une version minimale du launcher (minimum_launcher_version) — les anciens launchers ignorent proprement ce champ."
+      ],
+      "new_features_en": [
+        "One single SWARMEE Launcher for both games: the launcher now updates itself through a signed global manifest (channels/launcher) BEFORE checking the Claude and GPT games.",
+        "Updates are announced in a real window: versions, size, summary, mandatory or optional status, real steps (byte-accurate download, signature, size, SHA-256, install, restart, health check) — never silent, never a fake percentage.",
+        "Atomic replacement through an external updater: the previous version is backed up, restored and restarted automatically when the health check fails.",
+        "Installed at a stable path (%LOCALAPPDATA%\\SWARMEE\\Launcher): Desktop and Start Menu shortcuts always point there, never to a version-named file in Downloads; settings (language, volume, sounds, folder, behaviors, selected channel) survive every update.",
+        "The launcher appears in Windows Settings > Installed apps with a safe uninstall command.",
+        "Automatic cleanup after a validated update (previous version, rollback, ZIPs, staging, partial files) plus a \"Clean obsolete files\" action showing reclaimable space before deletion.",
+        "\"Maintenance and uninstall\" section: uninstall one channel, every game, or all of SWARMEE (external uninstaller, reinforced confirmation, saves are never deleted without an explicit confirmation).",
+        "Game manifests can require a minimum launcher version (minimum_launcher_version) — older launchers cleanly ignore the field."
+      ],
+      "known_limitations": [
+        "Les launchers 2.0.0 à 2.3.1 ne possèdent aucun mécanisme d'auto-mise à jour : ils seront migrés automatiquement par la prochaine mise à jour du jeu (pont de migration), ou par un unique téléchargement manuel de cette version.",
+        "Aucune signature de code Windows : SmartScreen peut afficher un avertissement au premier lancement."
+      ],
+      "known_limitations_en": [
+        "Launchers 2.0.0 through 2.3.1 contain no self-update path at all: they get migrated automatically by the next game update (migration bridge), or by one final manual download of this version.",
+        "No Windows code signing: SmartScreen may warn on first launch."
+      ],
+      "release_facts": {
+        "built_and_published_at_local": "2026-07-20T15:50:13-04:00 (America/Guadeloupe, UTC-04:00)",
+        "built_and_published_at_utc": "2026-07-20T19:50:13Z",
+        "source": "tag launcher-v2.4.0 (branche canonique track/launcher)",
+        "exe_size_bytes": "106895584",
+        "exe_sha256": "a5718df86e7f3a978d94d4fb06c2ac52e052d9bc47518df360850f31a0604f12"
+      }
+    },
+    {
+      "version": "2.3.1",
+      "date": "2026-07-19",
+      "title": "Volume, comportement au lancement, zone de notification, instance unique",
+      "title_en": "Volume, launch behavior, notification area, single instance",
+      "status": "released",
+      "notes": ["Publiée avec SWARMEE Claude 0.16.1-alpha."],
+      "notes_en": ["Published alongside SWARMEE Claude 0.16.1-alpha."]
+    },
+    {
+      "version": "2.3.0",
+      "date": "2026-07-18",
+      "title": "Notes de version bilingues et socle partagé 0.16",
+      "title_en": "Bilingual patch notes and shared 0.16 base",
+      "status": "released",
+      "notes": ["Publiée avec SWARMEE GPT 0.16.0-alpha."],
+      "notes_en": ["Published alongside SWARMEE GPT 0.16.0-alpha."]
+    }
+  ]
+}
