@@ -1,13 +1,13 @@
 {
     "manifest_version":  1,
     "channel":  "claude",
-    "version":  "0.16.0-alpha",
-    "file":  "SWARMEE-claude-v0.16.0-alpha-win64.zip",
-    "url":  "https://github.com/njomie971-boop/swarmee-releases/releases/download/claude-v0.16.0-alpha/SWARMEE-claude-v0.16.0-alpha-win64.zip",
-    "sha256":  "50ef3dde3e06ee28cce2c4e023d9a912d7e70eb3ed8441f12d9417851196f99e",
-    "size":  504921993,
+    "version":  "0.16.1-alpha",
+    "file":  "SWARMEE-claude-v0.16.1-alpha-win64.zip",
+    "url":  "https://github.com/njomie971-boop/swarmee-releases/releases/download/claude-v0.16.1-alpha/SWARMEE-claude-v0.16.1-alpha-win64.zip",
+    "sha256":  "82b6422dcb473b50bd37e133fa9adf502823d85286f683d96d952440ea01f242",
+    "size":  543205790,
     "executable":  "SWARMEE.exe",
-    "published_at":  "2026-07-18T16:06:41Z",
+    "published_at":  "2026-07-20T02:32:32Z",
     "patch_notes_url":  "https://raw.githubusercontent.com/njomie971-boop/swarmee-releases/main/channels/claude/patch_notes.json",
-    "patch_notes_sha256":  "deb3e7bf169f6f3b9d97ba221687cdc36f94dff75f0cae010f5eeb229e021003"
+    "patch_notes_sha256":  "b80406cc165dc6f8985f57c11fccc1f32891faa3df89f67998eec4d659a10f09"
 }
