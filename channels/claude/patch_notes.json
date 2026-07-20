@@ -1,184 +1,240 @@
 {
-	"schema_version": 2,
-	"channel": "claude",
-	"archive_verified_at": "2026-07-17",
-	"entries": [
-		{
-			"version": "0.16.0-alpha",
-			"date": "2026-07-17",
-			"title": "Multijoueur social — équipe, réanimation, XP commune, lobby persistant, audio",
-			"status": "released",
-			"new_features": [
-				"Coopération repensée : votre équipe partage une seule barre d'XP et un niveau commun, chacun garde ses propres augments.",
-				"Joueurs à terre et réanimation : un héros tombé n'est plus ciblé par les ennemis ; un allié maintient Interagir (~5 s) pour le relever à 35 % de vie avec une brève invulnérabilité. L'équipe n'est vaincue que lorsque tout le monde est à terre.",
-				"Montées de niveau synchronisées : le monde se met en pause, chacun reçoit son propre choix d'augment avec un minuteur commun de 15 secondes ; choix automatique à l'expiration.",
-				"Lobby persistant : après une partie, toute l'équipe revient au même salon (même code, mêmes profils, mêmes couleurs) — rejouer, retourner au lobby, abandonner ou quitter se décident par vote à la majorité.",
-				"Profils sociaux : pseudonyme, dix couleurs uniques, symbole d'accessibilité et avatar ; cartes de joueurs complètes dans un nouveau salon, jusqu'à dix joueurs (expérimental).",
-				"Barre d'équipe, alliés colorés sur la minimap, rubans et notifications (boss, allié à terre, niveau, vote) et conseils coopératifs.",
-				"Bande-son étendue : musiques de menu, de partie et de boss avec transitions en fondu enchaîné et sons pour les événements du salon.",
-				"Les ennemis se répartissent naturellement au lieu de s'empiler sur un seul point ; le contraste des zones de capture est nettement amélioré."
-			],
-			"fixes": [
-				"La mort d'un joueur est désormais répliquée immédiatement : les ennemis n'assiègent plus un héros à terre.",
-				"Les cristaux d'XP profitent à toute l'équipe une seule fois, côté hôte autoritaire — l'hôte comme les clients voient le même niveau.",
-				"« Recommencer » ne recharge plus la scène d'un seul joueur : la décision est partagée et resynchronise tout le monde.",
-				"Les paquets d'une partie précédente sont rejetés (match_epoch autoritaire) après un retour au lobby ou un replay."
-			],
-			"known_limitations": [
-				"Limite de dix joueurs expérimentale ; validée en tests locaux à deux instances (LAN, Internet direct, relais).",
-				"Réservé à une prochaine mise à jour (0.16.1) : indicateurs tactiques sous le héros, flèches d'alliés hors écran, réplication complète des événements en multijoueur, tooltips enrichis, bibliothèque des héros, options du launcher.",
-				"Validation exécutée spécifiquement sur le canal Claude (batterie de tests complète, scénarios multijoueur dédiés, soaks, QA visuelle, export Windows)."
-			],
-			"credits": "Musiques originales fournies par SuperBokit. OST « Prominence » par Pipo XLF.",
-			"channel": "claude"
-		},
-		{
-			"version": "0.15.0-alpha",
-			"date": "2026-07-17",
-			"title": "Parité avec le socle stable GPT 0.15.0 — Menaces, reprise de partie, refonte UI",
-			"status": "released",
-			"new_features": [
-				"Le canal Claude rattrape tout le socle stable de la version GPT 0.15.0 : gameplay, interface, stabilité et réseau, tout en restant un canal indépendant avec ses propres sauvegardes et installations.",
-				"Quatre niveaux de Menace (0 à 3) structurent la difficulté : Initiation et Standard immédiatement, Éclipse et Cataclysme déverrouillés par les victoires.",
-				"Nouvelles courbes d'équilibrage : ennemis plus résistants, armure ennemie, XP maîtrisée, réduction de cooldown réellement limitée à 80 %, orbes de soin à 0,5 %.",
-				"Nouveaux ennemis tactiques : le Traqueur de Faille charge les fuyards, le Porte-Égide protège ses alliés, le Shadow Bearer frappe d'un slam lourd et lisible.",
-				"Le Cœur de l'Éclipse est un vrai combat en trois phases avec fenêtres de vulnérabilité, salves, portails et pluies de zones dangereuses.",
-				"Quatre points d'intérêt tactiques (deux tirés par partie) offrent défense, risque, mobilité ou récompense d'augment.",
-				"En solo, la pause arrête réellement l'action ; la partie se sauvegarde, se ferme et se reprend avec héros, ennemis, boss, POI, XP, cooldowns et effets restaurés — récupération proposée après un arrêt anormal.",
-				"Refonte visuelle « Bastion d'obsidienne » : thème unifié, animations d'interface, responsive et accessibilité clavier/manette.",
-				"Le ping s'affiche en multijoueur et le réseau utilise le serveur SWARMEE dédié avec connexion directe puis relais automatique."
-			],
-			"fixes": [
-				"L'ancien profil Claude (versions 0.12 et antérieures) est adopté automatiquement par copie — l'original n'est jamais supprimé.",
-				"Les sauvegardes Claude utilisent des fichiers dédiés au canal ; aucune collision possible avec une installation GPT sur la même machine.",
-				"Une version Claude ne peut pas rejoindre une version GPT : le handshake refuse les canaux différents avec un message clair.",
-				"Corrections de pools, fermeture 3D propre, logs rotatifs et optimisations longue durée importées du socle GPT 0.15.0."
-			],
-			"known_limitations": [
-				"Cette version établit la parité technique avec GPT 0.15.0 ; le développement Claude reprend ensuite son cours indépendant.",
-				"La validation complète (tests, QA visuelle, réseau, longue durée) a été exécutée spécifiquement sur le canal Claude avant publication."
-			],
-			"sources": [
-				"tag:claude-v0.15.0-alpha",
-				"git:gpt-v0.15.0-alpha (socle importé)",
-				"docs/CLAUDE/GPT_015_PARITY_MAP.md"
-			]
-		},
-		{
-			"version": "0.12.1-alpha",
-			"date": "2026-07-13",
-			"title": "Lobby multijoueur nouvelle génération et launcher 1.1.0",
-			"status": "archive_only",
-			"new_features": [
-				"Chaque joueur du lobby ouvre le même écran complet de sélection du héros que dans le mode solo.",
-				"L’hôte choisit le champ de bataille sur l’écran des quatre arènes et cette sélection est synchronisée avec tous les joueurs.",
-				"Le launcher 1.1.0 ajoute l’icône officielle, le fond illustré et les notes de version riches avec cache local."
-			],
-			"fixes": [
-				"Le mode de sélection multijoueur réutilise les écrans solo sans modifier leur parcours normal.",
-				"La sélection de carte est transmise aux joueurs présents, aux arrivants tardifs et au lancement de la partie."
-			],
-			"known_limitations": [
-				"Cette version est documentée dans le projet et les PR Claude fusionnées, mais aucun tag ni aucune release publique 0.12.1-alpha n’a été retrouvé."
-			],
-			"sources": [
-				"git:origin/track/claude@3a0cfc4:CHANGELOG.md",
-				"https://github.com/njomie971-boop/swarmee-game/pull/2",
-				"https://github.com/njomie971-boop/swarmee-game/pull/3"
-			]
-		},
-		{
-			"version": "0.12.0-alpha",
-			"date": "2026-07-13",
-			"title": "Équilibrage, Cercle d’Épreuve, jeu en ligne et musique originale",
-			"status": "released",
-			"new_features": [
-				"« Prominence » de Pipo XLF accompagne les parties et porte le total audio à 18 flux.",
-				"Le jeu en ligne par code tente une connexion directe puis un relais automatique.",
-				"Le Cercle d’Épreuve récompense le maintien dans une zone pendant 20 secondes.",
-				"Le directeur de difficulté, les héros, les ennemis et le boss ont reçu une passe d’équilibrage complète.",
-				"Le jeu comporte 114 augments et une minimap enrichie de marqueurs d’événements."
-			],
-			"fixes": [
-				"L’adresse Noray obsolète, le handshake UDP, les codes de salon, le réhébergement et la fermeture des sessions ont été corrigés.",
-				"Les versions incompatibles sont refusées avec un message lisible au lieu d’une désynchronisation silencieuse."
-			],
-			"known_limitations": [
-				"Le serveur communautaire Noray pouvait être indisponible ; le mode Avancé LAN/UPnP était le repli documenté."
-			],
-			"sources": [
-				"tag:v0.12.0-alpha",
-				"https://github.com/njomie971-boop/swarmee-releases/releases/tag/v0.12.0-alpha",
-				"https://github.com/njomie971-boop/swarmee-game/pull/1",
-				"git:origin/track/claude@3a0cfc4:CHANGELOG.md",
-				"asset:v0.12.0-alpha/patch_notes.json"
-			]
-		},
-		{
-			"version": "0.11.0-alpha",
-			"date": "2026-07-12",
-			"title": "Écrans de sélection, failles du Voile et multijoueur auto-hébergé",
-			"status": "released",
-			"new_features": [
-				"Le nouvel écran de héros présente la fiche complète, le kit, le passif et les statistiques.",
-				"Un écran séparé permet de choisir parmi quatre champs de bataille avec aperçu et histoire.",
-				"Les failles du Voile ouvrent des drafts d’augments spéciaux en cours de partie.",
-				"Le multijoueur par Internet auto-hébergé via UPnP complète le mode LAN."
-			],
-			"fixes": [
-				"Les télégraphes DangerZone sont désormais poolés pour réduire le coût des phases chargées du boss."
-			],
-			"known_limitations": [
-				"L’hébergement Internet dépend de l’UPnP du routeur ou d’une redirection manuelle du port UDP 42424."
-			],
-			"sources": [
-				"tag:v0.11.0-alpha",
-				"https://github.com/njomie971-boop/swarmee-releases/releases/tag/v0.11.0-alpha",
-				"git:origin/track/claude@2aade76:CHANGELOG.md",
-				"asset:v0.12.0-alpha/patch_notes.json"
-			]
-		},
-		{
-			"version": "0.10.2-alpha",
-			"date": "2026-07-12",
-			"title": "Correctif critique de l’exécutable Windows",
-			"status": "released",
-			"new_features": [],
-			"fixes": [
-				"L’exécutable exporté charge à nouveau les héros, les augments, les cartes et l’audio depuis les ressources remappées.",
-				"Le boot exporté vérifie désormais explicitement les comptes de données et de flux audio."
-			],
-			"known_limitations": [],
-			"sources": [
-				"tag:v0.10.2-alpha",
-				"https://github.com/njomie971-boop/swarmee-releases/releases/tag/v0.10.2-alpha",
-				"git:origin/track/claude@cbb2bd3:CHANGELOG.md",
-				"asset:v0.12.0-alpha/patch_notes.json"
-			]
-		},
-		{
-			"version": "0.10.1-alpha",
-			"date": "2026-07-11",
-			"title": "Première alpha distribuée",
-			"status": "released",
-			"new_features": [
-				"Le mode Infini prolonge la partie après la victoire avec des boss récurrents.",
-				"Les trois héros disposent de passifs et d’indicateurs de compétence runiques.",
-				"Le lancement rapide ou normal des compétences, l’aperçu TAB, quatre cartes et les cinématiques de mort et de boss sont disponibles.",
-				"Le premier launcher public installe, met à jour et conserve une version précédente."
-			],
-			"fixes": [
-				"L’écran noir après la mort, l’aperçu TAB, la perte d’orbes d’expérience, la portée des attaques et plusieurs freezes ont été corrigés."
-			],
-			"known_limitations": [
-				"Cette archive a ensuite été remplacée par 0.10.2-alpha : l’exécutable 0.10.1-alpha publié ne chargeait pas correctement ses données et son audio."
-			],
-			"sources": [
-				"tag:v0.10.1-alpha",
-				"https://github.com/njomie971-boop/swarmee-releases/releases/tag/v0.10.1-alpha",
-				"git:origin/track/claude@0684ff3:CHANGELOG.md",
-				"git:origin/track/claude@cbb2bd3:CHANGELOG.md"
-			]
-		}
-	]
+  "schema_version": 2,
+  "channel": "claude",
+  "archive_verified_at": "2026-07-17",
+  "entries": [
+    {
+      "version": "0.16.1-alpha",
+      "date": "2026-07-19",
+      "title": "Parité GPT 0.16, commandes réelles, manette, pause de draft, musique synchronisée",
+      "title_en": "GPT 0.16 parity, real install commands, controller, draft pause, synced music",
+      "status": "released",
+      "new_features": [
+        "Socle GPT 0.16 porté intégralement : minimap enrichie, compas tactique, flèches d'alliés hors écran, bibliothèque des héros, profils avec avatars (12 portraits originaux + import personnel recadré 128 px sans métadonnées), couleurs et symboles de salon uniques attribués par l'hôte, votes, conseils contextuels, playlists musicales contextuelles, ping RTT applicatif.",
+        "Commandes par défaut reprises de la configuration réelle installée : attaque de base sur Espace / gâchette gauche, sort actif sur clic gauche / RB, ultime sur clic droit / RT, incantation rapide activée. « Valeurs par défaut » restaure exactement ce mapping ; les remappages personnels sont préservés à la migration (sauvegarde automatique avant migration).",
+        "Navigation manette complète : chaque écran est parcourable sans souris, B (Xbox) et Rond (PlayStation) équivalent contextuellement à Échap, confirmation « Quitter SWARMEE ? » sur l'écran titre avec Annuler par défaut.",
+        "Vraie pause de draft multijoueur : simulation intégralement figée (projectiles, cooldowns, effets), réseau et interface actifs, minuteur explicite avec alerte, choix automatique déterministe, voile « En attente des autres joueurs… » avec statuts individuels, reprise progressive synchronisée (~1,5 s).",
+        "Musique de partie synchronisée : l'hôte choisit piste et contexte pour tout le salon (métadonnées uniquement, volumes locaux), arrivées en cours de partie et reconnexions reprennent la piste au bon endroit avec un fondu propre.",
+        "Barres de vie graduées communes (héros, alliés, élites, boss) avec graduations dynamiques recalculées ; événement de capture lisible : états inactif/capture/contesté/sécurisé, anneau segmenté, panneau temporisé bilingue, marqueur minimap, progression 100 % côté hôte.",
+        "Launcher 2.3.1 : volume, comportement au lancement (par défaut : réduction dans la zone de notification avec icône et menu Ouvrir/Lancer/Vérifier/Quitter), instance unique, notes de version bilingues."
+      ],
+      "new_features_en": [
+        "Full GPT 0.16 base ported: enriched minimap, tactical compass, off-screen ally arrows, hero library, profiles with avatars (12 original portraits + personal import cropped to 128 px, metadata stripped), unique host-assigned lobby colors and symbols, votes, contextual tips, contextual music playlists, application RTT ping.",
+        "Default commands taken from the real installed configuration: primary attack on Space / left trigger, active skill on left click / RB, ultimate on right click / RT, quick cast enabled. \"Restore defaults\" brings back exactly this mapping; personal rebinds survive migration (automatic backup before migrating).",
+        "Complete controller navigation: every screen is fully playable without a mouse, B (Xbox) and Circle (PlayStation) contextually equal Escape, and the title screen shows a \"Quit SWARMEE?\" confirmation with Cancel focused by default.",
+        "True multiplayer draft pause: the whole simulation freezes (projectiles, cooldowns, effects) while network and UI stay live, with an explicit timer, deterministic auto-pick, a \"Waiting for other players…\" veil with per-player status, and a synchronized ~1.5 s progressive resume.",
+        "Synchronized match music: the host picks track and context for the whole lobby (metadata only, volumes stay local); late joins and reconnections resume the right track at the right position with a clean fade.",
+        "Shared graduated health bars (hero, allies, elites, boss) with dynamically recalculated ticks; readable capture event: idle/capturing/contested/secured states, segmented ring, timed bilingual panel, minimap marker, fully host-authoritative progress.",
+        "Launcher 2.3.1: volume, launch behavior (default: minimize to the notification area with a tray icon and Open/Play/Check/Quit menu), single instance, bilingual patch notes."
+      ],
+      "fixes": [
+        "Plus jamais deux musiques superposées : un fondu interrompu ne peut plus couper la nouvelle piste ni laisser deux lecteurs actifs (régression automatique dédiée, vérifiée sur trois parties consécutives, boss, reconnexion et arrivée en cours).",
+        "Aucune attaque de base ne part plus hors de portée (ni animation, ni son, ni cooldown) ; l'orientation suit la cible, puis le déplacement, puis reste stable ; l'auto-visée des sorts désactivée est réellement désactivée (joystick droit / curseur).",
+        "La notification de niveau d'équipe n'apparaît plus qu'une seule fois par niveau et par partie ; le pseudonyme se propage immédiatement partout (révision monotone).",
+        "Salon : cartes verticales équitables de 1 à 10 joueurs, hôte sans carte surdimensionnée, disparition de la rangée de cases vides ; paramètres entièrement traduits (« Écran 3 », descriptions d'affichage) avec barre d'actions toujours visible.",
+        "Cliquer sur l'interface (barre d'équipe, modales, votes, minimap) ne déclenche plus jamais un sort."
+      ],
+      "fixes_en": [
+        "Never two overlapping tracks again: an interrupted fade can no longer kill the new track or leave two players audible (dedicated automated regression, verified across three consecutive runs, boss, reconnection and late join).",
+        "Basic attacks no longer fire out of range (no animation, sound or cooldown); facing follows target, then movement, then stays stable; disabled skill auto-aim is truly disabled (right stick / cursor).",
+        "The team level notification now appears only once per level per match; display names propagate instantly everywhere (monotonic revision).",
+        "Lobby: fair vertical cards from 1 to 10 players, no oversized host card, empty-slot strip removed; settings fully translated (\"Screen 3\", display descriptions) with an always-visible action bar.",
+        "Clicking the interface (team bar, modals, votes, minimap) never casts a spell anymore."
+      ],
+      "known_limitations": [
+        "L'accès en ligne public dépend du relais Noray communautaire (51.79.64.207).",
+        "Version alpha : équilibrage et contenu en évolution."
+      ],
+      "known_limitations_en": [
+        "Public online play depends on the community Noray relay (51.79.64.207).",
+        "Alpha build: balance and content still evolving."
+      ],
+      "release_facts": {
+        "validated_at_local": "2026-07-19T14:06:45-04:00 (America/Guadeloupe, UTC-04:00)",
+        "validated_at_utc": "2026-07-19T18:06:45Z",
+        "built_and_published_at_local": "2026-07-19T22:32:32-04:00 (America/Guadeloupe, UTC-04:00)",
+        "built_and_published_at_utc": "2026-07-20T02:32:32Z",
+        "source_commit": "tag claude-v0.16.1-alpha (dépôt source privé)",
+        "zip_size_bytes": "543205790",
+        "zip_sha256": "82b6422dcb473b50bd37e133fa9adf502823d85286f683d96d952440ea01f242"
+      }
+    },
+    {
+      "version": "0.16.0-alpha",
+      "date": "2026-07-17",
+      "title": "Multijoueur social — équipe, réanimation, XP commune, lobby persistant, audio",
+      "status": "released",
+      "new_features": [
+        "Coopération repensée : votre équipe partage une seule barre d'XP et un niveau commun, chacun garde ses propres augments.",
+        "Joueurs à terre et réanimation : un héros tombé n'est plus ciblé par les ennemis ; un allié maintient Interagir (~5 s) pour le relever à 35 % de vie avec une brève invulnérabilité. L'équipe n'est vaincue que lorsque tout le monde est à terre.",
+        "Montées de niveau synchronisées : le monde se met en pause, chacun reçoit son propre choix d'augment avec un minuteur commun de 15 secondes ; choix automatique à l'expiration.",
+        "Lobby persistant : après une partie, toute l'équipe revient au même salon (même code, mêmes profils, mêmes couleurs) — rejouer, retourner au lobby, abandonner ou quitter se décident par vote à la majorité.",
+        "Profils sociaux : pseudonyme, dix couleurs uniques, symbole d'accessibilité et avatar ; cartes de joueurs complètes dans un nouveau salon, jusqu'à dix joueurs (expérimental).",
+        "Barre d'équipe, alliés colorés sur la minimap, rubans et notifications (boss, allié à terre, niveau, vote) et conseils coopératifs.",
+        "Bande-son étendue : musiques de menu, de partie et de boss avec transitions en fondu enchaîné et sons pour les événements du salon.",
+        "Les ennemis se répartissent naturellement au lieu de s'empiler sur un seul point ; le contraste des zones de capture est nettement amélioré."
+      ],
+      "fixes": [
+        "La mort d'un joueur est désormais répliquée immédiatement : les ennemis n'assiègent plus un héros à terre.",
+        "Les cristaux d'XP profitent à toute l'équipe une seule fois, côté hôte autoritaire — l'hôte comme les clients voient le même niveau.",
+        "« Recommencer » ne recharge plus la scène d'un seul joueur : la décision est partagée et resynchronise tout le monde.",
+        "Les paquets d'une partie précédente sont rejetés (match_epoch autoritaire) après un retour au lobby ou un replay."
+      ],
+      "known_limitations": [
+        "Limite de dix joueurs expérimentale ; validée en tests locaux à deux instances (LAN, Internet direct, relais).",
+        "Réservé à une prochaine mise à jour (0.16.1) : indicateurs tactiques sous le héros, flèches d'alliés hors écran, réplication complète des événements en multijoueur, tooltips enrichis, bibliothèque des héros, options du launcher.",
+        "Validation exécutée spécifiquement sur le canal Claude (batterie de tests complète, scénarios multijoueur dédiés, soaks, QA visuelle, export Windows)."
+      ],
+      "credits": "Musiques originales fournies par SuperBokit. OST « Prominence » par Pipo XLF.",
+      "channel": "claude"
+    },
+    {
+      "version": "0.15.0-alpha",
+      "date": "2026-07-17",
+      "title": "Parité avec le socle stable GPT 0.15.0 — Menaces, reprise de partie, refonte UI",
+      "status": "released",
+      "new_features": [
+        "Le canal Claude rattrape tout le socle stable de la version GPT 0.15.0 : gameplay, interface, stabilité et réseau, tout en restant un canal indépendant avec ses propres sauvegardes et installations.",
+        "Quatre niveaux de Menace (0 à 3) structurent la difficulté : Initiation et Standard immédiatement, Éclipse et Cataclysme déverrouillés par les victoires.",
+        "Nouvelles courbes d'équilibrage : ennemis plus résistants, armure ennemie, XP maîtrisée, réduction de cooldown réellement limitée à 80 %, orbes de soin à 0,5 %.",
+        "Nouveaux ennemis tactiques : le Traqueur de Faille charge les fuyards, le Porte-Égide protège ses alliés, le Shadow Bearer frappe d'un slam lourd et lisible.",
+        "Le Cœur de l'Éclipse est un vrai combat en trois phases avec fenêtres de vulnérabilité, salves, portails et pluies de zones dangereuses.",
+        "Quatre points d'intérêt tactiques (deux tirés par partie) offrent défense, risque, mobilité ou récompense d'augment.",
+        "En solo, la pause arrête réellement l'action ; la partie se sauvegarde, se ferme et se reprend avec héros, ennemis, boss, POI, XP, cooldowns et effets restaurés — récupération proposée après un arrêt anormal.",
+        "Refonte visuelle « Bastion d'obsidienne » : thème unifié, animations d'interface, responsive et accessibilité clavier/manette.",
+        "Le ping s'affiche en multijoueur et le réseau utilise le serveur SWARMEE dédié avec connexion directe puis relais automatique."
+      ],
+      "fixes": [
+        "L'ancien profil Claude (versions 0.12 et antérieures) est adopté automatiquement par copie — l'original n'est jamais supprimé.",
+        "Les sauvegardes Claude utilisent des fichiers dédiés au canal ; aucune collision possible avec une installation GPT sur la même machine.",
+        "Une version Claude ne peut pas rejoindre une version GPT : le handshake refuse les canaux différents avec un message clair.",
+        "Corrections de pools, fermeture 3D propre, logs rotatifs et optimisations longue durée importées du socle GPT 0.15.0."
+      ],
+      "known_limitations": [
+        "Cette version établit la parité technique avec GPT 0.15.0 ; le développement Claude reprend ensuite son cours indépendant.",
+        "La validation complète (tests, QA visuelle, réseau, longue durée) a été exécutée spécifiquement sur le canal Claude avant publication."
+      ],
+      "sources": [
+        "tag:claude-v0.15.0-alpha",
+        "git:gpt-v0.15.0-alpha (socle importé)",
+        "docs/CLAUDE/GPT_015_PARITY_MAP.md"
+      ]
+    },
+    {
+      "version": "0.12.1-alpha",
+      "date": "2026-07-13",
+      "title": "Lobby multijoueur nouvelle génération et launcher 1.1.0",
+      "status": "archive_only",
+      "new_features": [
+        "Chaque joueur du lobby ouvre le même écran complet de sélection du héros que dans le mode solo.",
+        "L’hôte choisit le champ de bataille sur l’écran des quatre arènes et cette sélection est synchronisée avec tous les joueurs.",
+        "Le launcher 1.1.0 ajoute l’icône officielle, le fond illustré et les notes de version riches avec cache local."
+      ],
+      "fixes": [
+        "Le mode de sélection multijoueur réutilise les écrans solo sans modifier leur parcours normal.",
+        "La sélection de carte est transmise aux joueurs présents, aux arrivants tardifs et au lancement de la partie."
+      ],
+      "known_limitations": [
+        "Cette version est documentée dans le projet et les PR Claude fusionnées, mais aucun tag ni aucune release publique 0.12.1-alpha n’a été retrouvé."
+      ],
+      "sources": [
+        "git:origin/track/claude@3a0cfc4:CHANGELOG.md",
+        "https://github.com/njomie971-boop/swarmee-game/pull/2",
+        "https://github.com/njomie971-boop/swarmee-game/pull/3"
+      ]
+    },
+    {
+      "version": "0.12.0-alpha",
+      "date": "2026-07-13",
+      "title": "Équilibrage, Cercle d’Épreuve, jeu en ligne et musique originale",
+      "status": "released",
+      "new_features": [
+        "« Prominence » de Pipo XLF accompagne les parties et porte le total audio à 18 flux.",
+        "Le jeu en ligne par code tente une connexion directe puis un relais automatique.",
+        "Le Cercle d’Épreuve récompense le maintien dans une zone pendant 20 secondes.",
+        "Le directeur de difficulté, les héros, les ennemis et le boss ont reçu une passe d’équilibrage complète.",
+        "Le jeu comporte 114 augments et une minimap enrichie de marqueurs d’événements."
+      ],
+      "fixes": [
+        "L’adresse Noray obsolète, le handshake UDP, les codes de salon, le réhébergement et la fermeture des sessions ont été corrigés.",
+        "Les versions incompatibles sont refusées avec un message lisible au lieu d’une désynchronisation silencieuse."
+      ],
+      "known_limitations": [
+        "Le serveur communautaire Noray pouvait être indisponible ; le mode Avancé LAN/UPnP était le repli documenté."
+      ],
+      "sources": [
+        "tag:v0.12.0-alpha",
+        "https://github.com/njomie971-boop/swarmee-releases/releases/tag/v0.12.0-alpha",
+        "https://github.com/njomie971-boop/swarmee-game/pull/1",
+        "git:origin/track/claude@3a0cfc4:CHANGELOG.md",
+        "asset:v0.12.0-alpha/patch_notes.json"
+      ]
+    },
+    {
+      "version": "0.11.0-alpha",
+      "date": "2026-07-12",
+      "title": "Écrans de sélection, failles du Voile et multijoueur auto-hébergé",
+      "status": "released",
+      "new_features": [
+        "Le nouvel écran de héros présente la fiche complète, le kit, le passif et les statistiques.",
+        "Un écran séparé permet de choisir parmi quatre champs de bataille avec aperçu et histoire.",
+        "Les failles du Voile ouvrent des drafts d’augments spéciaux en cours de partie.",
+        "Le multijoueur par Internet auto-hébergé via UPnP complète le mode LAN."
+      ],
+      "fixes": [
+        "Les télégraphes DangerZone sont désormais poolés pour réduire le coût des phases chargées du boss."
+      ],
+      "known_limitations": [
+        "L’hébergement Internet dépend de l’UPnP du routeur ou d’une redirection manuelle du port UDP 42424."
+      ],
+      "sources": [
+        "tag:v0.11.0-alpha",
+        "https://github.com/njomie971-boop/swarmee-releases/releases/tag/v0.11.0-alpha",
+        "git:origin/track/claude@2aade76:CHANGELOG.md",
+        "asset:v0.12.0-alpha/patch_notes.json"
+      ]
+    },
+    {
+      "version": "0.10.2-alpha",
+      "date": "2026-07-12",
+      "title": "Correctif critique de l’exécutable Windows",
+      "status": "released",
+      "new_features": [],
+      "fixes": [
+        "L’exécutable exporté charge à nouveau les héros, les augments, les cartes et l’audio depuis les ressources remappées.",
+        "Le boot exporté vérifie désormais explicitement les comptes de données et de flux audio."
+      ],
+      "known_limitations": [],
+      "sources": [
+        "tag:v0.10.2-alpha",
+        "https://github.com/njomie971-boop/swarmee-releases/releases/tag/v0.10.2-alpha",
+        "git:origin/track/claude@cbb2bd3:CHANGELOG.md",
+        "asset:v0.12.0-alpha/patch_notes.json"
+      ]
+    },
+    {
+      "version": "0.10.1-alpha",
+      "date": "2026-07-11",
+      "title": "Première alpha distribuée",
+      "status": "released",
+      "new_features": [
+        "Le mode Infini prolonge la partie après la victoire avec des boss récurrents.",
+        "Les trois héros disposent de passifs et d’indicateurs de compétence runiques.",
+        "Le lancement rapide ou normal des compétences, l’aperçu TAB, quatre cartes et les cinématiques de mort et de boss sont disponibles.",
+        "Le premier launcher public installe, met à jour et conserve une version précédente."
+      ],
+      "fixes": [
+        "L’écran noir après la mort, l’aperçu TAB, la perte d’orbes d’expérience, la portée des attaques et plusieurs freezes ont été corrigés."
+      ],
+      "known_limitations": [
+        "Cette archive a ensuite été remplacée par 0.10.2-alpha : l’exécutable 0.10.1-alpha publié ne chargeait pas correctement ses données et son audio."
+      ],
+      "sources": [
+        "tag:v0.10.1-alpha",
+        "https://github.com/njomie971-boop/swarmee-releases/releases/tag/v0.10.1-alpha",
+        "git:origin/track/claude@0684ff3:CHANGELOG.md",
+        "git:origin/track/claude@cbb2bd3:CHANGELOG.md"
+      ]
+    }
+  ]
 }
