@@ -1,8 +1,68 @@
 {
   "schema_version": 2,
   "channel": "claude",
-  "archive_verified_at": "2026-07-17",
+  "archive_verified_at": "2026-07-21",
   "entries": [
+    {
+      "version": "0.16.2-alpha",
+      "date": "2026-07-21",
+      "title": "Manette de bout en bout, boules d'XP visibles par tous, menu de pause complet",
+      "title_en": "End-to-end controller play, XP orbs visible to everyone, full pause menu",
+      "status": "released",
+      "new_features": [
+        "Boules d'XP en multijoueur : elles étaient invisibles pour les joueurs qui rejoignaient une partie. Tout le monde voit désormais les mêmes orbes, au même endroit, et n'importe quel joueur peut les ramasser — y compris pendant que l'hôte est à terre ou mort. L'hôte reste seul juge de la collecte, l'XP n'est attribuée qu'une fois et l'orbe disparaît pour tous en même temps.",
+        "Menu de pause complet : Reprendre, Caractéristiques, Augments, Compétences, Paramètres, Aide et Retour au menu ou au salon. L'Aide affiche vos commandes réelles, remappages compris.",
+        "Rapport de partie navigable à la manette : trois onglets (Augments, Caractéristiques, Compétences) au LB/RB ou à la croix directionnelle, défilement au stick, ouverture et fermeture par le bouton Vue.",
+        "Sélection du héros et du champ de bataille entièrement pilotables à la manette : le focus arrive sur la carte présélectionnée, la croix directionnelle change de héros, A confirme. Plus aucune souris nécessaire.",
+        "Barres de canalisation pour la réanimation d'un allié, la capture de zone et les points d'intérêt, à la place des pourcentages ; les élites et boss affichent leurs PV exacts.",
+        "Panneau d'attente du draft repensé en carte latérale : une fois votre augment choisi, vous revoyez le monde au lieu d'un voile opaque.",
+        "Choix du périphérique de sortie audio, et option pour couper le son quand la fenêtre passe en arrière-plan.",
+        "Assistant de migration du launcher embarqué : si votre launcher est une ancienne version incapable de se mettre à jour, le jeu vous propose d'installer le launcher moderne. Vos jeux et toutes vos sauvegardes sont conservés, et la mise à jour du launcher devient ensuite automatique."
+      ],
+      "new_features_en": [
+        "Multiplayer XP orbs: they were invisible to joining players. Everyone now sees the same orbs in the same place, and any player can pick them up — including while the host is downed or dead. The host alone validates collection, XP is granted exactly once, and the orb disappears for everyone at the same moment.",
+        "Full pause menu: Resume, Characteristics, Augments, Abilities, Settings, Help and Return to menu or lobby. Help shows your real bindings, remaps included.",
+        "Controller-navigable run report: three tabs (Augments, Characteristics, Abilities) via LB/RB or the D-pad, stick scrolling, opened and closed with the View button.",
+        "Hero and battlefield selection fully playable on a controller: focus lands on the preselected card, the D-pad changes hero, A confirms. No mouse needed anywhere.",
+        "Channel bars for ally revives, zone capture and points of interest, replacing bare percentages; elites and bosses show their exact HP.",
+        "Draft waiting panel redesigned as a side card: once your augment is picked, you see the world again instead of an opaque veil.",
+        "Audio output device selection, and an option to mute the game while its window is in the background.",
+        "Embedded launcher migration helper: if your launcher is an older version that cannot update itself, the game offers to install the modern one. Your games and every save are preserved, and launcher updates become automatic afterwards."
+      ],
+      "fixes": [
+        "B (Xbox) et Rond (PlayStation) n'ouvrent plus jamais la pause pendant le combat : ils gardent l'action que vous leur avez assignée, et ne servent de retour qu'une fois un menu ouvert.",
+        "Manettes PlayStation annoncées « Sony… » désormais reconnues : les glyphes affichent Croix, Rond, Carré, Triangle au lieu des libellés Xbox.",
+        "Commandes après mise à jour d'une très ancienne installation : l'attaque de base pouvait se retrouver sur le clic gauche, c'est-à-dire la même touche que le sort actif. Les commandes manquantes reprennent la configuration de référence, vos remappages personnels restant prioritaires.",
+        "Les PV affichés au-dessus des élites et des boss ne restaient plus figés sur leur valeur d'apparition.",
+        "Une barre de vie ne se dessine plus par-dessus le menu de pause."
+      ],
+      "fixes_en": [
+        "B (Xbox) and Circle (PlayStation) never open the pause during combat anymore: they keep the action you assigned them, and act as Back only once a menu is open.",
+        "PlayStation pads reported as \"Sony…\" are now recognised: glyphs show Cross, Circle, Square, Triangle instead of Xbox labels.",
+        "Bindings after updating a very old installation: the basic attack could end up on left click, the same button as the active skill. Missing bindings now fall back to the reference configuration, with your personal remaps still taking priority.",
+        "HP shown above elites and bosses no longer stays frozen on its spawn value.",
+        "A health bar no longer draws on top of the pause menu."
+      ],
+      "known_limitations": [
+        "L'accès en ligne public dépend du relais Noray communautaire (51.79.64.207).",
+        "L'assistant de migration du launcher concerne le canal Claude ; le canal GPT le recevra à sa prochaine mise à jour.",
+        "Version alpha : équilibrage et contenu en évolution."
+      ],
+      "known_limitations_en": [
+        "Public online play depends on the community Noray relay (51.79.64.207).",
+        "The launcher migration helper ships on the Claude channel; the GPT channel gets it with its next update.",
+        "Alpha build: balance and content still evolving."
+      ],
+      "release_facts": {
+        "validated_at_local": "2026-07-21T12:20:00-04:00 (America/Guadeloupe, UTC-04:00)",
+        "validated_at_utc": "2026-07-21T16:20:00Z",
+        "built_and_published_at_local": "2026-07-21T14:49:43-04:00 (America/Guadeloupe, UTC-04:00)",
+        "built_and_published_at_utc": "2026-07-21T18:49:43Z",
+        "source_commit": "tag claude-v0.16.2-alpha (dépôt source privé)",
+        "zip_size_bytes": "543296662",
+        "zip_sha256": "d22a1599c391a5f367f1d36f52b5e735a9b3ca1f618b34a2ad8268dc8c9ba665"
+      }
+    },
     {
       "version": "0.16.1-alpha",
       "date": "2026-07-19",
