@@ -2,6 +2,42 @@
   "channel": "launcher",
   "entries": [
     {
+      "version": "2.4.1",
+      "date": "2026-07-21",
+      "title": "Identité de barre des tâches fiable, zone de notification réelle, langue instantanée",
+      "title_en": "Reliable taskbar identity, real notification area, instant language switch",
+      "status": "released",
+      "new_features": [
+        "Identité Windows fiable (AppUserModelID « SWARMEE.Launcher ») : le raccourci ET la fenêtre du launcher la portent réellement, vérifiée en relisant la propriété — Windows regroupe le launcher sous une seule entrée de barre des tâches.",
+        "Zone de notification corrigée pour de vrai : réduire ou fermer (croix) cache la fenêtre et retire son bouton de la barre des tâches tout en gardant le processus actif ; double-clic ou « Ouvrir » la restaure ; une seule instance, une seule icône ; « Quitter complètement » est le seul vrai arrêt. Option désactivée : la croix ferme normalement, sans icône fantôme.",
+        "Changement de langue instantané : toute l'interface du launcher (fenêtre principale, écran Paramètres déjà ouvert, menu de la zone de notification, boutons, descriptions) se retraduit immédiatement, sans redémarrage ni réouverture, et la préférence est conservée après mise à jour.",
+        "Raccourci menu Démarrer canonique sous un dossier SWARMEE, avec la nouvelle icône dédiée, la cible et le dossier de travail corrects (jamais un chemin temporaire ou de développement).",
+        "Réparation des installations en double plus sûre : le worker ne confond plus un dossier générique (par ex. C:\\tools présent sur beaucoup de machines) avec un arbre source, donc un ancien launcher en double est correctement détecté et retiré."
+      ],
+      "new_features_en": [
+        "Reliable Windows identity (AppUserModelID \"SWARMEE.Launcher\"): the shortcut AND the launcher window truly carry it, verified by reading the property back — Windows groups the launcher under a single taskbar entry.",
+        "Notification area fixed for real: minimizing or closing (the X) hides the window and removes its taskbar button while the process stays alive; double-click or \"Open\" restores it; one instance, one icon; \"Quit completely\" is the only real exit. Option off: the X closes normally, with no ghost icon.",
+        "Instant language switch: the whole launcher UI (main window, an already-open Settings screen, the notification-area menu, buttons, descriptions) retranslates immediately, without restart or reopening, and the preference survives updates.",
+        "Canonical Start Menu shortcut under a SWARMEE folder, with the new dedicated icon and the correct target and working directory (never a temp or developer path).",
+        "Safer double-install repair: the worker no longer mistakes a generic folder (e.g. C:\\tools, present on many machines) for a source tree, so a leftover duplicate launcher is correctly detected and removed."
+      ],
+      "known_limitations": [
+        "Aucune signature de code Windows : SmartScreen peut afficher un avertissement au premier lancement.",
+        "Les launchers 2.0.0 à 2.3.1 n'ont pas d'auto-mise à jour : ils sont migrés par la prochaine mise à jour du jeu (pont de migration) ou par un unique téléchargement manuel."
+      ],
+      "known_limitations_en": [
+        "No Windows code signing: SmartScreen may warn on first launch.",
+        "Launchers 2.0.0 through 2.3.1 have no self-update: they are migrated by the next game update (migration bridge) or by one manual download."
+      ],
+      "release_facts": {
+        "built_and_published_at_local": "2026-07-21T21:09:27-04:00 (America/Guadeloupe, UTC-04:00)",
+        "built_and_published_at_utc": "2026-07-22T01:09:27Z",
+        "source": "tag launcher-v2.4.1 (branche canonique track/launcher)",
+        "exe_size_bytes": "107275304",
+        "exe_sha256": "fab5a6a821f613d2f83b96204cc2a3daf23b298b4b28e100582fad520797926f"
+      }
+    },
+    {
       "version": "2.4.0",
       "date": "2026-07-20",
       "title": "Launcher canonique : auto-mise à jour, chemin stable, nettoyage et désinstallation",
